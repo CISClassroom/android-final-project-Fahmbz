@@ -19,8 +19,8 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var auth: FirebaseAuth
-    private lateinit var googleSignInClient: GoogleSignInClient
+    lateinit var auth: FirebaseAuth
+    lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +62,15 @@ class MainActivity : AppCompatActivity() {
     }
     private fun registeremail(){
 
+    }
+    private fun revokeAccess() {
+        // Firebase sign out
+        auth.signOut()
+
+        // Google revoke access
+        googleSignInClient.revokeAccess().addOnCompleteListener(this) {
+            updateUI(null)
+        }
     }
 
     public override fun onStart() {
