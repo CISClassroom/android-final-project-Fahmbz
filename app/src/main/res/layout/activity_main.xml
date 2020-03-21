@@ -12,10 +12,10 @@
         android:layout_height="1008dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintHorizontal_bias="0.632"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321"
+        app:layout_constraintVertical_bias="0.115"
         app:srcCompat="@drawable/pinkwall1" />
 
     <ImageView
@@ -24,23 +24,11 @@
         android:layout_height="182dp"
         app:layout_constraintBottom_toTopOf="@+id/button_login_google"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.792"
         app:srcCompat="@drawable/calendar" />
-
-    <Button
-        android:id="@+id/button_login_email"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/shape_pure_pink_buttom"
-        android:text="SIGN IN WITH E-mail"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login_google"
-        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_login_google"
@@ -54,14 +42,14 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/registertext"
+    <Button
+        android:id="@+id/buttonsignOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="SIGN OUT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login_email" />
+        app:layout_constraintTop_toBottomOf="@+id/button_login_google" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

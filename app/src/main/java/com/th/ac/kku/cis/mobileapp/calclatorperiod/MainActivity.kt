@@ -30,8 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         // Button listeners
         button_login_google.setOnClickListener({v -> signInwithgoogle()})
-        button_login_email.setOnClickListener({v -> signInwithemail()})
-        registertext.setOnClickListener({v -> registeremail()})
+        buttonsignOut.setOnClickListener({v -> signOut()})
 
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -57,12 +56,13 @@ class MainActivity : AppCompatActivity() {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
-    private fun signInwithemail(){
+    //private fun signInwithemail(){
+  //      setContentView(R.layout.activity_email)
 
-    }
-    private fun registeremail(){
-
-    }
+  //  }
+  //  private fun registeremail(){
+  //      setContentView(R.layout.activity_register)
+  //  }
     private fun revokeAccess() {
         // Firebase sign out
         auth.signOut()
@@ -81,7 +81,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
-
+//hideProgressBar()
+        if (user != null) {
+            button_login_google.visibility = View.GONE
+            buttonsignOut.visibility = View.VISIBLE
+        } else {
+            button_login_google.visibility = View.VISIBLE
+            buttonsignOut.visibility = View.GONE
+        }
     }
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
