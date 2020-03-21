@@ -1,5 +1,6 @@
 package com.th.ac.kku.cis.mobileapp.calclatorperiod
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,7 +15,10 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import kotlinx.android.synthetic.main.activity_logout.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.buttonsignOut
+import kotlinx.android.synthetic.main.activity_main.status
 import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
@@ -56,21 +60,12 @@ class MainActivity : AppCompatActivity() {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
-    //private fun signInwithemail(){
-  //      setContentView(R.layout.activity_email)
-
-  //  }
-  //  private fun registeremail(){
-  //      setContentView(R.layout.activity_register)
-  //  }
     private fun revokeAccess() {
         // Firebase sign out
-        auth.signOut()
-
-        // Google revoke access
-        googleSignInClient.revokeAccess().addOnCompleteListener(this) {
-            updateUI(null)
-        }
+      var i = setContentView(R.layout.activity_logout)
+    }
+    public fun startca(){
+        var i = setContentView(R.layout.activity_calendar)
     }
 
     public override fun onStart() {
@@ -79,17 +74,19 @@ class MainActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         updateUI(currentUser)
     }
-
-    private fun updateUI(user: FirebaseUser?) {
-//hideProgressBar()
+    @SuppressLint("StringFormatInvalid")
+    private fun updateUI(user: FirebaseUser?) =//hideProgressBar()
         if (user != null) {
+            status.text = getString(R.string.google_status_fmt, user.email)
+
             button_login_google.visibility = View.GONE
             buttonsignOut.visibility = View.VISIBLE
         } else {
+            status.setText(R.string.sign_out)
+
             button_login_google.visibility = View.VISIBLE
             buttonsignOut.visibility = View.GONE
         }
-    }
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -136,7 +133,6 @@ class MainActivity : AppCompatActivity() {
                 // [END_EXCLUDE]
             }
     }
-
     companion object {
         private const val TAG = "GoogleActivity"
         private const val RC_SIGN_IN = 9001
