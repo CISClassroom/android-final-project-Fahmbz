@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/pinkwall3" />
+
+    <EditText
+        android:id="@+id/name_event"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="138dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="549dp"
+        android:background="@drawable/activity_white_background"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="ชื่อกิจกรรม" />
+
+    <EditText
+        android:id="@+id/add_location"
+        android:layout_width="271dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="214dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="471dp"
+        android:autofillHints=""
+        android:background="@drawable/activity_white_background"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="สถานที่" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="63dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="211dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="478dp"
+        app:srcCompat="@drawable/pin" />
+
+    <EditText
+        android:id="@+id/edit_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="281dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="298dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="150dp"
+        android:autofillHints=""
+        android:background="@drawable/activity_white_background"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="รายละเอียด" />
+
+    <Button
+        android:id="@+id/button_save_event"
+        android:layout_width="98dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="82dp"
+        android:background="@drawable/shape_pink_buttom"
+        android:text="SAVE" />
+
+</RelativeLayout>

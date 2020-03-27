@@ -3,9 +3,10 @@ package com.th.ac.kku.cis.mobileapp.calclatorperiod
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class CalendatActivity : AppCompatActivity () {
+class AddEventActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_calendar)
+        setContentView(R.layout.activity_add_event)
+
     }
 }
