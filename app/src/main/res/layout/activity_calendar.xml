@@ -14,54 +14,88 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="330dp"
-        android:layout_height="464dp"
+        android:layout_width="wrap_content"
+        android:layout_height="462dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="230dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="205dp"
         android:background="@drawable/activity_white_background" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="301dp"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="98dp"
+        app:srcCompat="@drawable/activity_white_background" />
+
+    <ScrollView
+        android:layout_width="303dp"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="96dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="315dp"
+        android:layout_height="105dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="100dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <Button
         android:id="@+id/button_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="501dp"
-        android:layout_marginEnd="258dp"
-        android:layout_marginBottom="182dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="52dp"
+        android:layout_toStartOf="@+id/button_about"
         android:background="@drawable/shape_pink_buttom"
         android:text="ADD" />
 
     <Button
-        android:id="@+id/button_todate"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_detail"
+        android:layout_width="101dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="154dp"
-        android:layout_marginEnd="169dp"
-        android:layout_marginBottom="182dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="52dp"
+        android:layout_toStartOf="@+id/button_about"
         android:background="@drawable/shape_pink_buttom"
-        android:text="To DATE" />
+        android:text="Detail" />
 
     <Button
         android:id="@+id/button_about"
-        android:layout_width="wrap_content"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="82dp"
-        android:layout_marginBottom="182dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/shape_pink_buttom"
         android:text="ABOUT" />
 

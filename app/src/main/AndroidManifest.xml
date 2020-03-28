@@ -19,6 +19,7 @@
         <activity android:name=".AboutActivity" />
         <activity android:name=".AddEventActivity" />
         <activity android:name=".CalendarActivity" />
+        <activity android:name=".DetailEventCalendar" />
     </application>
 
 </manifest>
