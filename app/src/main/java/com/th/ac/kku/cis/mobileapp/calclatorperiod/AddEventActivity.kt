@@ -14,28 +14,27 @@ import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_add_event.*
 
 class AddEventActivity : AppCompatActivity() {
-    var name_event : EditText? = null
-    var add_location : EditText? = null
-    var edit_detail : EditText? = null
-    var button_save_event : Button? = null
-    var dateset : EditText? = null
+
+    val nameevent: EditText? = findViewById(R.id.name_event)
+    val add_location: EditText? = findViewById(R.id.add_location)
+    val edit_detail: EditText? = findViewById(R.id.edit_detail)
+    val button_save_event: Button? = findViewById(R.id.button_save_event)
+    val dateset: EditText? = findViewById(R.id.dateset)
+
+    lateinit var mDB: DatabaseReference
+    lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_event)
 
-        name_event = findViewById(R.id.name_event)
-        add_location = findViewById(R.id.add_location)
-        edit_detail = findViewById(R.id.edit_detail)
-        dateset = findViewById(R.id.dateset)
-        button_save_event = findViewById(R.id.button_save_event)
 
         button_save_event!!.setOnClickListener {
             intent = Intent(this, DetailEventCalendar::class.java)
-            intent.putExtra("NAME",""+ name_event!!.getText().toString())
-            intent.putExtra("LOCATION",""+ add_location!!.getText().toString())
-            intent.putExtra("DETAIL",""+ edit_detail!!.getText().toString())
-            intent.putExtra("DATE",""+dateset!!.getText().toString())
+            intent.putExtra("NAME", "" + name_event!!.getText().toString())
+            intent.putExtra("LOCATION", "" + add_location!!.getText().toString())
+            intent.putExtra("DETAIL", "" + edit_detail!!.getText().toString())
+            intent.putExtra("DATE", "" + dateset!!.getText().toString())
             startActivity(intent)
 
 
