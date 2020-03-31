@@ -17,14 +17,7 @@ import kotlinx.android.synthetic.main.activity_add_event.*
 
 class AddEventActivity : AppCompatActivity() {
 
-//    val nameevent: EditText? = findViewById(R.id.name_event)
-//    val add_location: EditText? = findViewById(R.id.add_location)
-//    val edit_detail: EditText? = findViewById(R.id.edit_detail)
-//    val button_save_event: Button? = findViewById(R.id.button_save_event)
-//    val dateset: EditText? = findViewById(R.id.dateset)
-
     lateinit var mDB: DatabaseReference
-    lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,23 +26,21 @@ class AddEventActivity : AppCompatActivity() {
         mDB = FirebaseDatabase.getInstance().reference
 
         button_save_event!!.setOnClickListener {
-            var newData: AddModel = AddModel.create()
-            val obj = mDB.child("DTitem").push()
-            newData.nameevent = name_event.text.toString()
-            newData.add_location = add_location.text.toString()
-            newData.edit_detail = edit_detail.text.toString()
-            newData.dateset = dateset.text.toString()
+                var newData: AddModel = AddModel.create()
+                var obj = mDB.child("calendar").push()
+                newData.nameevent = name_event.text.toString()
+                newData.add_location = add_location.text.toString()
+                newData.dateset = dateset.text.toString()
+                newData.edit_detail = edit_detail.text.toString()
 
-            newData.id = obj.key
-            obj.setValue(newData)
-            Toast.makeText(applicationContext, "เพิ่มกิจกรรมเรียบร้อยแล้ว", Toast.LENGTH_SHORT)
-                .show()
+                newData.id = obj.key
+                obj.setValue(newData)
+                Toast.makeText(applicationContext, "เพิ่มเรียบร้อยแล้ว", Toast.LENGTH_SHORT)
+                    .show()
+                var i = Intent(this, DetailEventCalendar::class.java)
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(i)
+            }
         }
-          //  intent = Intent(this, DetailEventCalendar::class.java)
-            //intent.putExtra("NAME", "" + name_event!!.getText().toString())
-            //intent.putExtra("LOCATION", "" + add_location!!.getText().toString())
-            //intent.putExtra("DETAIL", "" + edit_detail!!.getText().toString())
-            //intent.putExtra("DATE", "" + dateset!!.getText().toString())
-            //startActivity(intent)
-        }
+
     }

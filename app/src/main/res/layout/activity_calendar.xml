@@ -55,6 +55,7 @@
     </ScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detaildate"
         android:layout_width="315dp"
         android:layout_height="105dp"
         android:layout_alignParentEnd="true"
