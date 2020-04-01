@@ -1,6 +1,3 @@
 <resources>
-    <string name="app_name" >My Application</string>
-    <string name="firebase_status_fmt"/>
-    <string name="google_status_fmt" />
-    <string name="sign_out" />
+    <string name="app_name">Cal</string>
 </resources>
