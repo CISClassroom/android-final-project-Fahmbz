@@ -12,10 +12,22 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.th.ac.kku.cis.mobileapp.calclatorperiod.Model.AddModel
 import kotlinx.android.synthetic.main.activity_add_event.*
+class calendar {
+    companion object Factory {
+        fun create(): calendar = calendar()
+    }
+    var id:String?=null
+    var nameevent:String?=null
+    var add_location:String?=null
+    var edit_detail :String?=null
+    var dateset :String?=null
+}
 
 class AddEventActivity : AppCompatActivity() {
+    private val PERMISSION_CODE = 1000;
+
+    var adddt:calendar = calendar.create()
 
     lateinit var mDB: DatabaseReference
 
@@ -26,7 +38,8 @@ class AddEventActivity : AppCompatActivity() {
         mDB = FirebaseDatabase.getInstance().reference
 
         button_save_event!!.setOnClickListener {
-                var newData: AddModel = AddModel.create()
+                var newData: calendar = calendar.create()
+
                 var obj = mDB.child("calendar").push()
                 newData.nameevent = name_event.text.toString()
                 newData.add_location = add_location.text.toString()

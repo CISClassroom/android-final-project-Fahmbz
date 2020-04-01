@@ -1,4 +1,4 @@
-package com.th.ac.kku.cis.mobileapp.calclatorperiod.Model
+/*package com.th.ac.kku.cis.mobileapp.calclatorperiod.Model
 
 class AddModel {
     companion object Factory {
@@ -9,5 +9,4 @@ class AddModel {
     var add_location:String?=null
     var edit_detail :String?=null
     var dateset :String?=null
-
-}
+}*/
