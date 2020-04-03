@@ -12,6 +12,19 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/pinkwall3" />
 
+    <Button
+        android:id="@+id/btcancel"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="202dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/shape_pink_buttom"
+        android:text="CANCEL" />
+
     <EditText
         android:id="@+id/name_event"
         android:layout_width="wrap_content"
@@ -24,8 +37,8 @@
         android:layout_marginBottom="485dp"
         android:background="@drawable/activity_white_background"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="ชื่อกิจกรรม" />
+        android:hint="     ชื่อกิจกรรม"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/add_location"
@@ -38,8 +51,8 @@
         android:autofillHints=""
         android:background="@drawable/activity_white_background"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="สถานที่" />
+        android:hint="     สถานที่"
+        android:inputType="textPersonName" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -66,9 +79,9 @@
         android:autofillHints=""
         android:background="@drawable/activity_white_background"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:hint="     รายละเอียด"
 
-        android:text="รายละเอียด" />
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/button_save_event"
@@ -77,9 +90,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="221dp"
+        android:layout_marginBottom="73dp"
         android:background="@drawable/shape_pink_buttom"
         android:text="SAVE" />
 
@@ -95,6 +108,7 @@
         android:layout_marginBottom="544dp"
         android:background="@drawable/activity_white_background"
         android:ems="10"
+        android:hint="    วัน/เดือน/ปี"
         android:inputType="date" />
 
 </RelativeLayout>

@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     private fun addproject() {
         Log.w("wwwwwwwwwwwww", "error")
         if (newpropro) {
-            var i = Intent(this, AboutActivity::class.java)
+            var i = Intent(this, aboutActivity::class.java)
             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(i)
         }

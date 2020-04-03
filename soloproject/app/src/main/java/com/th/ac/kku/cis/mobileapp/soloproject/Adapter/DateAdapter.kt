@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import com.th.ac.kku.cis.mobileapp.soloproject.Model.calendar
 import com.th.ac.kku.cis.mobileapp.soloproject.R
-import com.th.ac.kku.cis.mobileapp.soloproject.calendar
 
 public class DateAdapter (val mCtx: Context,
                          var resource:Int,

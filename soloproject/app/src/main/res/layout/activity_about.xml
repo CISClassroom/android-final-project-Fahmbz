@@ -14,7 +14,27 @@
         app:srcCompat="@drawable/pinkwall3" />
 
     <Button
-        android:id="@+id/button_calender"
+        android:id="@+id/btadddate"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/shape_pink_buttom"
+        android:text=" ADD DATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <Button
+        android:id="@+id/btcalender"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -27,16 +47,16 @@
         android:text="calender" />
 
     <Button
-        android:id="@+id/buttonsignOut2"
+        android:id="@+id/buttonsignOut"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
 
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="49dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="189dp"
         android:background="@drawable/shape_pink_buttom"
         android:text="SIGN OUT"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -14,12 +14,12 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import kotlinx.android.synthetic.main.activity_about.*
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_about.*
 
-class AboutActivity : AppCompatActivity () {
+class aboutActivity : AppCompatActivity () {
     lateinit var auth: FirebaseAuth
-    var newpropro: Boolean = false
+    var peakaboo: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,25 +37,32 @@ class AboutActivity : AppCompatActivity () {
 
         auth.currentUser!!.email
 
-        val btnlogout: Button = findViewById(R.id.buttonsignOut2)
+        val btnlogout: Button = findViewById(R.id.buttonsignOut)
         btnlogout.setOnClickListener({ v -> singOut() })
-        button_calender.setOnClickListener {
-            var i = Intent(this, CalendarActivity::class.java)
+        btcalender.setOnClickListener {
+            var i = Intent(this, CalActivity::class.java)
             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(i)
         }
+        btadddate.setOnClickListener {
+            var i = Intent(this, AdddateActivity::class.java)
+            i.setFlags((Intent.FLAG_ACTIVITY_CLEAR_TOP))
+            startActivity(i)
+        }
     }
+
     private fun passproject() {
-        if (newpropro) {
+        if (peakaboo) {
             var i = Intent(this, MainActivity::class.java)
             i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(i)
         }
     }
+
     private fun singOut() {
 
         auth.signOut()
-        newpropro = true
+        peakaboo = true
         passproject()
     }
 
@@ -68,6 +75,7 @@ class AboutActivity : AppCompatActivity () {
         }
 
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 101) {
@@ -78,7 +86,7 @@ class AboutActivity : AppCompatActivity () {
                 //FirebaseAuth(account)
             } catch (e: ApiException) {
                 Log.i("Error OOP", e.toString())
-                newpropro = false
+                peakaboo = false
                 updateUI(null)
             }
         }
@@ -90,13 +98,12 @@ class AboutActivity : AppCompatActivity () {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
-                    newpropro = true
+                    peakaboo = true
                     updateUI(user)
                 } else {
-                    newpropro = false
+                    peakaboo = false
                     updateUI(null)
                 }
             }
-
     }
 }

@@ -51,52 +51,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/detailtime"
+                android:layout_width="match_parent"
+                android:layout_height="115dp" />
+        </LinearLayout>
     </ScrollView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/detaildate"
-        android:layout_width="315dp"
-        android:layout_height="105dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="100dp">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <Button
-        android:id="@+id/button_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="52dp"
-        android:layout_toStartOf="@+id/button_about"
-        android:background="@drawable/shape_pink_buttom"
-        android:text="ADD" />
-
-    <Button
-        android:id="@+id/button_detail"
-        android:layout_width="101dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="52dp"
-        android:layout_toStartOf="@+id/button_about"
-        android:background="@drawable/shape_pink_buttom"
-        android:text="Detail" />
 
     <Button
         android:id="@+id/button_about"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="46dp"
         android:background="@drawable/shape_pink_buttom"
         android:text="ABOUT" />
 
