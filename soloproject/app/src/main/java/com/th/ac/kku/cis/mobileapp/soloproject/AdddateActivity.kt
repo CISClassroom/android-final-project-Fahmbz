@@ -20,7 +20,7 @@ class AdddateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_event)
         mDB = FirebaseDatabase.getInstance().reference
-        
+
         btadddate.setOnClickListener {
             var newData: calendar = calendar()
             val obj = mDB.child("calendar").push()
